@@ -1,0 +1,35 @@
+<p>smoothies we offer:</p>
+
+<!-- <div *ngFor="let item of smoothiesList | async">
+    <p>{{item.name}}</p>
+</div> -->
+
+<!-- <hr /> -->
+
+<!-- <div *ngFor="let item of list()"> -->
+<div *ngFor="let item of smoothiesList | async">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="example-header-image"></div> -->
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-subtitle>Smoothie type</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <mat-card-content>
+            <p>
+            {{item.description}}
+            </p>
+            <table>
+                <tr>
+                    <td>Price:</td><td>{{item.price}} $</td>
+                </tr>
+            </table>
+        </mat-card-content>
+      </mat-card>
+</div>
+
+<div class="example-button-container">
+<button mat-fab color="primary" routerLink="edit" aria-label="Example icon button with a delete icon" >
+    <mat-icon>add</mat-icon>
+</button>
+</div>
